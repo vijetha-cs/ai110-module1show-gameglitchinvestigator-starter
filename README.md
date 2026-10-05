@@ -25,9 +25,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+I found bugs by playing the game and testing boundary inputs like 0, 100, and 99999. The game gave misleading hints and accepted values outside the expected range. I used AI to help locate the hint logic and refactor core functions into logic_utils.py, but I manually reviewed the changes and tested them before accepting them. I verified the fixes by running the Streamlit app and by adding pytest tests for hint direction, invalid text input, and difficulty range behavior.
 
 ## 📸 Demo Walkthrough
 
@@ -41,12 +39,12 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 🧪 Test Results
 
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
+txt
+platform win32 -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0
+collected 4 items
+
+tests\test_game_logic.py ....
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+I did not complete any optional stretch features for this submission.
