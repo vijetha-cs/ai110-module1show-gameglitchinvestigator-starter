@@ -13,10 +13,48 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| ----- | ----------------- | --------------- | ---------------------- |
+|       |                   |                 |                        |
+|       |                   |                 |                        |
+|       |                   |                 |                        |
+
+### Bug 1: High boundary bug
+
+What I did:
+I guessed 90, 97, 99, 100, and even 99999.
+
+What happened:
+The game still said "Go higher," even for very high guesses.
+
+What I expected:
+The game should only accept guesses in the valid range, likely 1–100. If the user enters a number outside that range, the game should reject it instead of giving a hint.
+
+### Bug 2: New Game button does not reset
+
+What I did:
+I clicked the "New Game" button after playing.
+
+What happened:
+The button seemed like it did not restart or reset the game clearly.
+
+What I expected:
+Clicking "New Game" should start a fresh game, reset the secret number, clear old guesses/messages, and reset the game state.
+
+### Bug 3: Low boundary bug
+
+What I did:
+I entered 0 as a guess.
+
+What happened:
+The game accepted 0 and said "Go lower."
+
+What I expected:
+The game should reject 0 because it is outside the valid guessing range.
+
+### Non-bug observation
+
+I tested invalid text/symbol inputs like abc, &, and {.
+The game did not accept them, so text validation seems to work correctly.
 
 ---
 
