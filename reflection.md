@@ -64,6 +64,12 @@ The game did not accept them, so text validation seems to work correctly.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
 
+I used AI to help identify where the hint logic and input validation bugs were located. The AI correctly suggested that the "Too High" and "Too Low" hint messages were reversed, so I changed the messages so high guesses tell the user to go lower and low guesses tell the user to go higher.
+
+The AI also suggested moving core logic into logic_utils.py so it could be tested separately from the Streamlit app. I accepted that suggestion because it made the code easier to test with pytest.
+
+One thing I reviewed carefully was the range validation. I made sure the app rejects guesses outside the allowed range instead of giving misleading hints. I verified the fix manually in the running game and with pytest tests in tests/test_game_logic.py.
+
 ---
 
 ## 3. Debugging and testing your fixes
